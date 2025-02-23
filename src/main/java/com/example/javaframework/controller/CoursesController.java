@@ -23,4 +23,10 @@ public class CoursesController {
     List<Courses> getAllCourses() {
         return coursesService.getAllCourses();
     }
+
+    @GetMapping("/{courseId}")
+    Courses getCourse(@PathVariable("courseId") String courseId) {
+        return coursesService.getCourseById(courseId);
+    }
+
 }

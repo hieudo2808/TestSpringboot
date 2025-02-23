@@ -12,9 +12,10 @@ public class Courses {
     private float process_score;
     private float coefficient;
     private int credits;
+    private Long user_id;
 
     @Column(insertable = false, updatable = false)
-    private Character letter_grade;
+    private String letter_grade;
     @Column(insertable = false, updatable = false)
     private Double courses_score_in4;
     @Column(insertable = false, updatable = false)
@@ -76,11 +77,11 @@ public class Courses {
         this.credits = credits;
     }
 
-    public Character getLetterGrade() {
+    public String getLetterGrade() {
         return letter_grade;
     }
 
-    public void setLetterGrade(Character letter_grade) {
+    public void setLetterGrade(String letter_grade) {
         this.letter_grade = letter_grade;
     }
 
@@ -98,5 +99,13 @@ public class Courses {
 
     public void setCoursesScore(Double courses_score) {
         this.courses_score = courses_score;
+    }
+
+    public Long getUserId() {
+        return user_id;
+    }
+
+    public void setUserId(Long user_id) {
+        this.user_id = user_id;
     }
 }

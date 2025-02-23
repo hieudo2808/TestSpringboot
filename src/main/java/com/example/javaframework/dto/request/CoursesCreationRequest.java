@@ -8,6 +8,7 @@ public class CoursesCreationRequest {
     private float process_score;
     private float coefficient;
     private int credits;
+    private Long user_id;
 
     public String getCourseId() {
         return course_id;
@@ -63,5 +64,13 @@ public class CoursesCreationRequest {
 
     public void setCredits(int credits) {
         this.credits = credits;
+    }
+
+    public Long getUserId() {
+        return user_id;
+    }
+
+    public void setUserId(Long user_id) {
+        this.user_id = user_id;
     }
 }

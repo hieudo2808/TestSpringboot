@@ -22,11 +22,16 @@ public class CoursesService {
         newCourse.setProcessScore(course.getProcessScore());
         newCourse.setFinalExamScore(course.getFinalExamScore());
         newCourse.setSemester(course.getSemester());
+        newCourse.setUserId(course.getUserId());
 
         return coursesRepository.save(newCourse);
     }
 
     public List<Courses> getAllCourses() {
         return coursesRepository.findAll();
+    }
+
+    public Courses getCourseById(String courseId) {
+        return coursesRepository.findById(courseId).orElseThrow(() -> new RuntimeException("Course not found"));
     }
 }
